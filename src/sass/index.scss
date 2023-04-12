@@ -1,2 +1,10 @@
-@import './common';
-@import './example';
+@import './utils/normalize';
+@import './utils/variables';
+@import './utils/mixin';
+@import './utils/common';
+
+@import './components/footer';
+@import './components/gallery-films';
+@import './components/heder-myLibery';
+@import './components/heder';
+@import './components/modal-info-film';
