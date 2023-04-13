@@ -1,5 +1,6 @@
 .header__container {
   height: 100vh;
+
   padding: 20px;
   background-image: url(../images/header-mobile.jpg);
   background-position: center;
@@ -7,14 +8,23 @@
   background-size: cover;
 
   @media screen and (min-width: $mobile-width) {
-    padding: 16px 32px;
-    width: 1216px;
-    height: 316px;
+    margin-top: 20px;
+    padding: 16px;
+    width: 460px;
+  }
+
+  @media screen and (min-width: $table-width) {
+    margin-top: 32px;
+    padding: 16px;
+    width: 704px;
+    height: 222px;
     background-image: url(../images/header-tablet.jpg);
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin-top: 32px;
+    padding: 16px 32px;
+    width: 1216px;
+    height: 316px;
     background-image: url(../images/header-desktop.jpg);
   }
 }
@@ -35,11 +45,11 @@
   width: 100%;
   order: 2;
 
-  @media screen and (min-width: $mobile-width) {
+  @media screen and (min-width: $table-width) {
     width: 165px;
   }
 
-  @media screen and (min-width: $table-width) {
+  @media screen and (min-width: $desktop-width) {
     width: 187px;
   }
 }
@@ -52,11 +62,11 @@
   border-radius: 100px;
   border: none;
 
-  @media screen and (min-width: $mobile-width) {
+  @media screen and (min-width: $table-width) {
     width: 165px;
   }
 
-  @media screen and (min-width: $table-width) {
+  @media screen and (min-width: $desktop-width) {
     width: 187px;
   }
 }
@@ -83,14 +93,10 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  order: 1;
-
-  @media screen and (min-width: $mobile-width) {
-    order: 2;
-  }
 
   @media screen and (min-width: $table-width) {
     gap: 8px;
+    order: 2;
   }
 }
 
@@ -121,13 +127,13 @@
 }
 
 .logo {
-  margin-top: 70vh;
+  margin-top: 60vh;
 
-  @media screen and (min-width: $mobile-width) {
+  @media screen and (min-width: $table-width) {
     margin-top: 105px;
   }
-  @media screen and (min-width: $table-width) {
-    margin-top: 159px;
+  @media screen and (min-width: $desktop-width) {
+    margin-top: 164px;
   }
 }
 
@@ -144,10 +150,8 @@
   font-size: 44px;
   color: #ffffff;
 
-  @media screen and (min-width: $mobile-width) {
-    justify-content: start;
-  }
   @media screen and (min-width: $table-width) {
+    justify-content: start;
     gap: 16px;
   }
 }
