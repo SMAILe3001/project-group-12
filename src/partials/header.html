@@ -1,11 +1,16 @@
 <div class="header__container container">
   <nav class="nav">
-    <input
-      class="search-input"
-      type="text"
-      name="search"
-      placeholder="Movie search"
-    />
+    <form class="search" name="search">
+      <input
+        class="search__input"
+        type="text"
+        name="search"
+        placeholder="Movie search"
+      />
+      <button class="search__btn" type="submit">
+        <img class="search__icon" src="./images/icons/search.svg" alt="logo" />
+      </button>
+    </form>
     <ul class="menu-list list">
       <li class="menu-list__item">
         <a class="menu-list__link menu-list__link--active" href="#">Home</a>
