@@ -38,9 +38,35 @@ footer {
 
 .footer__icon {
   display: inline-block;
+  -webkit-animation: 3s heartbeat infinite;
 }
 
 .footer__team-link {
   display: inline-block;
   color: #545454;
 }
+
+@-webkit-keyframes heartbeat {
+  0% {
+  }
+  40% {
+    scale: 1;
+  }
+  42% {
+    scale: 1.4;
+  }
+  44% {
+    scale: 1;
+  }
+  50% {
+    scale: 1;
+  }
+  52% {
+    scale: 1.4;
+  }
+  54% {
+    scale: 1;
+  }
+  100% {
+  }
+} ;
