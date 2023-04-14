@@ -1,8 +1,27 @@
+const genres = {
+  28: 'Action',
+  12: 'Adventure',
+  16: 'Animation',
+  35: 'Comedy',
+  80: 'Crime',
+  99: 'Documentary',
+  18: 'Drama',
+  10751: 'Family',
+  14: 'Fantasy',
+  36: 'History',
+  27: 'Horror',
+  10402: 'Music',
+  9648: 'Mystery',
+  10749: 'Romance',
+  878: 'Science Fiction',
+  10770: 'TV Movie',
+  53: 'Thriller',
+  10752: 'War',
+  37: 'Western',
+};
 const refs = {
   galleryFilms: document.querySelector('.galeryFilms-js'),
 };
-
-console.log(refs.galleryFilms);
 
 function renderMarkup(films) {
   console.log(films.results);
@@ -12,8 +31,8 @@ function renderMarkup(films) {
         <div>
             <img src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt="poster">
             <h2>${film.original_title}</h2>
-            <p>${film.media_type}</p>
-            <p>${film.release_date}</p>
+            <p>${film.genre_ids.map(id => genres[id]).join(', ')}</p>
+            <p>${film.release_date.substr(0, 4)}</p>
         </div>
         `;
       return cardFilm;
