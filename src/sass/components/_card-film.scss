@@ -1,0 +1,43 @@
+.film-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    // padding: 20px;
+    max-width: 395px;
+    margin: 32px;
+    @media screen and (min-width: $mobile-width) {
+            margin: 20px;
+        }
+}
+
+.film-poster {
+    width: 280px;
+    border-radius: 5px;
+    @media screen and (min-width: $table-width){
+        width: 336px;
+    }
+    @media screen and (min-width: $desktop-width){
+        width: 395px;
+    }
+};
+
+.film-title {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    display: flex;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 8px;
+    line-height: 1.33;
+}
+
+
+
+.film-details {
+    font-family: 'Roboto', sans-serif;
+    color: #B92F2C;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.33;
+}

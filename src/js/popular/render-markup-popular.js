@@ -28,13 +28,21 @@ function renderMarkup(films) {
   const createdElements = films.results
     .map(film => {
       const cardFilm = `
-        <div>
-            <img src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt="poster">
-            <h2>${film.original_title}</h2>
-            <p>${film.genre_ids.map(id => genres[id]).join(', ')}</p>
-            <p>${film.release_date.substr(0, 4)}</p>
-        </div>
-        `;
+      <div class="film-card">
+       <img class="film-poster" src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt="poster">
+       <h2 class="film-title">${film.original_title}</h2>
+       <div class="film-info">
+         <span class="film-details">${film.media_type} | ${film.release_date}</span>
+       </div>
+      </div>`
+      // const cardFilm = `
+      //   <div>
+      //       <img src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt="poster">
+      //       <h2>${film.original_title}</h2>
+      //       <p>${film.media_type}</p>
+      //       <p>${film.release_date}</p>
+      //   </div>
+      //   `;
       return cardFilm;
     })
     .join('');
