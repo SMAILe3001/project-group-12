@@ -1,4 +1,4 @@
-import genres from '../genres';
+import { genres } from '../genres';
 
 const refs = {
   galleryFilms: document.querySelector('.galleryFilms-js'),

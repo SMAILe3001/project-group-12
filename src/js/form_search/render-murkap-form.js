@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Notiflix from 'notiflix';
 import API from './load-form';
-import genres from '../genres';
+import { genres } from '../genres';
 
 const container = document.querySelector('.galeryFilms-js');
 const form = document.querySelector('.search');
