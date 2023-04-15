@@ -1,10 +1,8 @@
 import axios from 'axios';
 import Notiflix from 'notiflix';
+import { BASE_URL, API_KEY } from '../api';
 
 // =
-
-const BASE_URL = 'https://api.themoviedb.org/3/';
-const API_KEY = 'ce2d3c43772ebdf360cfaed86f3ba1bf';
 
 async function fetchMovie(inputValue) {
   try {
