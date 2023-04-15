@@ -1,22 +1,55 @@
+const genres = {
+  28: 'Action',
+  12: 'Adventure',
+  16: 'Animation',
+  35: 'Comedy',
+  80: 'Crime',
+  99: 'Documentary',
+  18: 'Drama',
+  10751: 'Family',
+  14: 'Fantasy',
+  36: 'History',
+  27: 'Horror',
+  10402: 'Music',
+  9648: 'Mystery',
+  10749: 'Romance',
+  878: 'Science Fiction',
+  10770: 'TV Movie',
+  53: 'Thriller',
+  10752: 'War',
+  37: 'Western',
+};
 const refs = {
   galleryFilms: document.querySelector('.galeryFilms-js'),
 };
-
-console.log(refs.galleryFilms);
 
 function renderMarkup(films) {
   console.log(films.results);
   const createdElements = films.results
     .map(film => {
-      const cardFilm = `
-        <div>
-            <img src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt="poster">
-            <h2>${film.original_title}</h2>
-            <p>${film.media_type}</p>
-            <p>${film.release_date}</p>
+      if (film.genre_ids.length <= 3) {
+        const cardFilm = `
+      <div class="film-card">
+        <img class="film-poster" src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt="poster">
+        <h2 class="film-title">${film.original_title}</h2>
+        <div class="film-info">
+        <span class="film-details">${film.genre_ids.map(id => genres[id]).join(', ')} | ${film.release_date.substr(0, 4)}</span>
         </div>
-        `;
-      return cardFilm;
+      </div>`
+        return cardFilm;
+      } else {
+        const cardFilm = `
+      <div class="film-card">
+        <img class="film-poster" src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt="poster">
+        <h2 class="film-title">${film.original_title}</h2>
+        <div class="film-info">
+        <span class="film-details">${film.genre_ids.slice(0, 3).map(id => genres[id]).join(', ')} <a href="/src/partials/modal-info-film.html" class="is-hidden">...</a> | ${film.release_date.substr(0, 4)}</span>
+        </div>
+      </div>`
+        return cardFilm;
+      }
+      
+      
     })
     .join('');
 
