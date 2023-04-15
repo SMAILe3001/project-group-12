@@ -20,7 +20,7 @@ const genres = {
   37: 'Western',
 };
 const refs = {
-  galleryFilms: document.querySelector('.galeryFilms-js'),
+  galleryFilms: document.querySelector('.galleryFilms-js'),
 };
 
 function renderMarkup(films) {
