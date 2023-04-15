@@ -27,7 +27,7 @@ function renderMarkup(films) {
   console.log(films.results);
   const createdElements = films.results
     .map(film => {
-      if (film.genre_ids.length <= 3) {
+      if (film.genre_ids.length <= 2) {
         const cardFilm = `
       <div class="film-card">
         <img class="film-poster" src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt="poster">
@@ -43,7 +43,7 @@ function renderMarkup(films) {
         <img class="film-poster" src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt="poster">
         <h2 class="film-title">${film.original_title}</h2>
         <div class="film-info">
-        <span class="film-details">${film.genre_ids.slice(0, 3).map(id => genres[id]).join(', ')} <a href="/src/partials/modal-info-film.html" class="is-hidden">...</a> | ${film.release_date.substr(0, 4)}</span>
+        <span class="film-details">${film.genre_ids.slice(0, 2).map(id => genres[id]).join(', ')}, Other | ${film.release_date.substr(0, 4)}</span>
         </div>
       </div>`
         return cardFilm;
