@@ -1,8 +1,5 @@
 import { genres } from '../genres';
-
-const refs = {
-  galleryFilms: document.querySelector('.galleryFilms-js'),
-};
+import { refs } from '../refs';
 
 function renderMarkup(films) {
   console.log(films.results);
