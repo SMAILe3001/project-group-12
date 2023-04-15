@@ -9,4 +9,4 @@ async function loadPopular() {
   throw new Error(response.statusText);
 }
 
-export default { loadPopular };
+export default loadPopular;
