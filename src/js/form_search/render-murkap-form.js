@@ -1,9 +1,9 @@
-import axios from 'axios';
+// import axios from 'axios';
 import Notiflix from 'notiflix';
 import API from './load-form';
 import { genres } from '../genres';
 
-const container = document.querySelector('.galeryFilms-js');
+const container = document.querySelector('.galleryFilms-js');
 const form = document.querySelector('.search');
 const inputElement = document.querySelector('.search__input');
 
@@ -29,7 +29,7 @@ async function fetchSerchForm(evt) {
   }
 }
 
-async function renderMovie(movies) {
+function renderMovie(movies) {
   const movieHTML = movies.results
     .filter(movie => movie.poster_path)
     .map(
