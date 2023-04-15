@@ -2,17 +2,14 @@
 import Notiflix from 'notiflix';
 import API from './load-form';
 import { genres } from '../genres';
+import { refs } from '../refs';
 
-const container = document.querySelector('.galleryFilms-js');
-const form = document.querySelector('.search');
-const inputElement = document.querySelector('.search__input');
-
-form.addEventListener('submit', fetchSerchForm);
+refs.form.addEventListener('submit', fetchSerchForm);
 
 async function fetchSerchForm(evt) {
   evt.preventDefault();
 
-  const inputValue = inputElement.value.toLowerCase().trim();
+  const inputValue = refs.inputElement.value.toLowerCase().trim();
 
   try {
     const movies = await API.fetchMovie(inputValue);
@@ -65,11 +62,11 @@ function renderMovie(movies) {
     )
     .join('');
 
-  container.innerHTML = movieHTML;
+  refs.galleryFilms.innerHTML = movieHTML;
 }
 
 function clearValue() {
-  inputElement.value = '';
+  refs.inputElement.value = '';
 }
 
 export default { renderMovie };
