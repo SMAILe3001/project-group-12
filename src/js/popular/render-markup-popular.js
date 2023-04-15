@@ -1,7 +1,7 @@
 import genres from '../genres';
 
 const refs = {
-  galleryFilms: document.querySelector('.galeryFilms-js'),
+  galleryFilms: document.querySelector('.galleryFilms-js'),
 };
 
 function renderMarkup(films) {
