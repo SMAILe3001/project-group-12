@@ -10,7 +10,7 @@ function renderMarkup(films) {
     .map(film => {
       if (film.genre_ids.length <= 2) {
         const cardFilm = `
-      <div class="film-card">
+      <div class="film-card" data-id=${film.id}>
         <img class="film-poster" src="https://image.tmdb.org/t/p/w500${
           film.poster_path
         }" alt="poster">
@@ -24,7 +24,7 @@ function renderMarkup(films) {
         return cardFilm;
       } else {
         const cardFilm = `
-      <div class="film-card">
+      <div class="film-card" data-id=${film.id}>
         <img class="film-poster" src="https://image.tmdb.org/t/p/w500${
           film.poster_path
         }" alt="poster">
