@@ -35,8 +35,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   min-width: 320px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @media screen and (min-width: $mobile-width) {
     width: $mobile-width;
@@ -44,6 +44,8 @@ body {
 
   @media screen and (min-width: $table-width) {
     width: $table-width;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   @media screen and (min-width: $desktop-width) {
