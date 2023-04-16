@@ -1,0 +1,27 @@
+<h2>{{title}}</h2>
+<ul>
+    <li class="description-set">
+        <p class="description-set__text">Vote / Votes</p>
+        <p class="description-set__value">
+            <span class="description-set__rating">{{vote_average}}</span>
+            <span class="description-set__separator">/</span>
+            <span class="description-set__vote">{{vote_count}}</span>
+        </p>
+    </li>
+    <li class="description-set">
+        <p class="description-set__text">Popularity</p>
+        <p class="description-set__value">{{popularity}}</p>
+    </li>
+    <li class="description-set">
+        <p class="description-set__text">Original Title</p>
+        <p class="description-set__value">{{original_title}}</p>
+    </li>
+    <li class="description-set">
+        <p class="description-set__text">Genre</p>
+        <p class="description-set__value">
+            {{#each genres}}{{#if @index}}, {{/if}}{{name}}{{/each}}
+        </p>
+    </li>
+</ul>
+<h4>ABOUT</h4>
+<p>{{overview}}</p>

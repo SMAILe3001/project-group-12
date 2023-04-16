@@ -1,4 +1,4 @@
-export default genres = {
+export const genres = {
   28: 'Action',
   12: 'Adventure',
   16: 'Animation',

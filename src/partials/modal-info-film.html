@@ -1,14 +1,26 @@
 <div class="backdrop is-hidden">
-  <div class="film-card">
-    <button class="film-card__button-close" type="button">
-      <svg width="30px" height="30px" class="button-close__icon">
+  <div class="modal">
+    <button class="film-info-card__button-close" type="button">
+      <img src="./images/icons/close.svg" class="button-close__icon" />
+      <!-- <svg width="30px" height="30px" class="button-close__icon">
         <use href="./images/icons/close.svg"></use>
-      </svg>
+      </svg> -->
     </button>
-    <div class="film-card__box">
-<!-- <div class="film-card__image-block">
-  <img class="film-card__image" src="https://image.tmdb.org/t/p/original${poster_path}" alt="film" />
+    <div class="film-info__card">
+      <div class="film-info-card__image"></div>
+    </div>
+    <div class="film-info__details">
+      <div class="film-info-card__bloque"></div>
+      <div class="film-info-card__buttons">
+        <button class="btn-add-to-watched" type="button">ADD TO WATCHED</button>
+        <button class="btn-add-to-queue" type="button">ADD TO QUEUE</button>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- 
+
 <div class="film-card__description">
   <h1 class="film-card__description-title"></h1>
   <ul class="film-card__description-set">
@@ -47,7 +59,3 @@
   </div>
 </div>
 </div> -->
-    </div>
-  </div>
-  </div>
-
