@@ -1,24 +1,24 @@
 <h2>{{title}}</h2>
-<ul>
-    <li class="description-set">
-        <p class="description-set__text">Vote / Votes</p>
-        <p class="description-set__value">
-            <span class="description-set__rating">{{vote_average}}</span>
-            <span class="description-set__separator">/</span>
-            <span class="description-set__vote">{{vote_count}}</span>
+<ul class="film-info-details__list">
+    <li class="film-info-details__element">
+        <p class="film-info-details__text">Vote / Votes</p>
+        <p class="film-info-details__value">
+            <span class="film-info-details__rating">{{vote_average}}</span>
+            <span class="film-info-details__separator">/</span>
+            <span class="film-info-details__vote">{{vote_count}}</span>
         </p>
     </li>
-    <li class="description-set">
-        <p class="description-set__text">Popularity</p>
-        <p class="description-set__value">{{popularity}}</p>
+    <li class="film-info-details__element">
+        <p class="film-info-details__text">Popularity</p>
+        <p class="film-info-details__value">{{popularity}}</p>
     </li>
-    <li class="description-set">
-        <p class="description-set__text">Original Title</p>
-        <p class="description-set__value">{{original_title}}</p>
+    <li class="film-info-details__element">
+        <p class="film-info-details__text">Original Title</p>
+        <p class="film-info-details__value">{{original_title}}</p>
     </li>
-    <li class="description-set">
-        <p class="description-set__text">Genre</p>
-        <p class="description-set__value">
+    <li class="film-info-details__element">
+        <p class="film-info-details__text">Genre</p>
+        <p class="film-info-details__value">
             {{#each genres}}{{#if @index}}, {{/if}}{{name}}{{/each}}
         </p>
     </li>
