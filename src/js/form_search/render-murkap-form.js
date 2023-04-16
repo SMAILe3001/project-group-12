@@ -3,11 +3,13 @@ import Notiflix from 'notiflix';
 import API from './load-form';
 import { refs } from '../refs';
 import renderMovie from '../render-markup';
+import { showSpinner, hideSpinner } from '../spiner';
 
 refs.form.addEventListener('submit', fetchSerchForm);
 
 async function fetchSerchForm(evt) {
   evt.preventDefault();
+  showSpinner();
 
   const inputValue = refs.inputElement.value.toLowerCase().trim();
 
@@ -24,6 +26,7 @@ async function fetchSerchForm(evt) {
     Notiflix.Notify.failure(error);
     throw error;
   }
+  hideSpinner();
 }
 
 // function renderMovie(movies) {
