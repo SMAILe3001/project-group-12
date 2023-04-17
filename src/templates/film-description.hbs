@@ -1,27 +1,41 @@
 <h2>{{title}}</h2>
-<ul class="film-info-details__list">
-    <li class="film-info-details__element">
-        <p class="film-info-details__text">Vote / Votes</p>
-        <p class="film-info-details__value">
+
+<table class="film-info-details__table">
+    <tr>
+        <td class="film-info-details__text">
+          Vote / Votes
+        </td>
+        <td class="film-info-details__value">
             <span class="film-info-details__rating">{{vote_average}}</span>
             <span class="film-info-details__separator">/</span>
             <span class="film-info-details__vote">{{vote_count}}</span>
-        </p>
-    </li>
-    <li class="film-info-details__element">
-        <p class="film-info-details__text">Popularity</p>
-        <p class="film-info-details__value">{{popularity}}</p>
-    </li>
-    <li class="film-info-details__element">
-        <p class="film-info-details__text">Original Title</p>
-        <p class="film-info-details__value">{{original_title}}</p>
-    </li>
-    <li class="film-info-details__element">
-        <p class="film-info-details__text">Genre</p>
-        <p class="film-info-details__value">
-            {{#each genres}}{{#if @index}}, {{/if}}{{name}}{{/each}}
-        </p>
-    </li>
-</ul>
-<h4>ABOUT</h4>
-<p>{{overview}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="film-info-details__text">
+          Popularity
+        </td>
+        <td class="film-info-details__value">
+          {{popularity}}
+        </td>                
+    </tr>
+    <tr>
+        <td class="film-info-details__text">
+          Original Title
+        </td>
+        <td class="film-info-details__value">
+          {{original_title}}
+        </td>                
+    </tr>
+    <tr>
+        <td class="film-info-details__text">
+          Genre
+        </td>
+        <td class="film-info-details__value">
+          {{#each genres}}{{#if @index}}, {{/if}}{{name}}{{/each}}
+        </td>                
+    </tr>        
+</table>
+
+<h4 class="film-info__about-header">ABOUT</h4>
+<p class="film-info__about">{{overview}}</p>

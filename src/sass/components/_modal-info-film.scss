@@ -3,7 +3,7 @@
   height: 100vh;
   position: fixed;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
   transition: visibility 0.5s, opacity 0.5s;
   overflow: auto;
@@ -132,33 +132,105 @@
   width: 391px;
 }
 
-.film-info-details__list {
+.film-info-details__table {
   list-style: none;
-  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
 }
 
 .film-info-details__element {
   display: flex;
 }
 
-.film-info-details__value {
-  margin-left: 20px;
-  font-weight: 400;
-  color: #888;
+.film-info-details__text {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: $color-secondary;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding: 0;
+  width: 152px;
+  vertical-align: top;
 }
 
+.film-info-details__value {
+  font-weight: 500;
+  color: $color-primary-dark;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  // padding-top: 4px;
+  // padding-bottom: 4px;
+  vertical-align: top;
+}
+
+.film-info-details__rating {
+  display: inline-block;
+  background-color: $color-active;
+  color: #ffffff;
+  width: 36px;
+  height: 16px;
+  border-radius: 5px;
+  align-items: center;
+  text-align: center;
+  padding: 1px;
+  margin-right: 3px;
+}
+
+.film-info__about-header {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.333;
+  align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.film-info__about {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: $color-primary-dark;
+}
 .film-info-card__buttons {
+  display: flex;
   padding-top: 20px;
+  gap: 10px;
 }
 
 .modal-button {
   border-radius: 8px;
   background-color: $color-primary-background;
-  border: red solid 1px;
-  padding: 10px;
+  border: $color-active;
+  padding: 10px 12px;
   margin-right: 10px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;  
+
+  box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
+  border-radius: 100px;  
+
+  cursor: pointer;
 }
 
+
+.modal-button__active {
+  background-color: $color-active;
+  color: #ffffff;
+}
 // .film-card__description-title {
 //   font-size: 20px;
 //   margin-bottom: 20px;
