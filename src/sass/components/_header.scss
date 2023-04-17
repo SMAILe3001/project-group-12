@@ -6,16 +6,32 @@
   background-size: cover;
   border-radius: 10px;
 
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/header-mobile@2x.jpg);
+  }
+
   @media screen and (min-width: $table-width) {
     height: 222px;
     padding: 16px;
     background-image: url(../images/header-tablet.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/header-tablet@2x.jpg);
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
     padding: 16px 32px 32px 32px;
     height: 316px;
     background-image: url(../images/header-desktop.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/header-desktop@2x.jpg);
+    }
   }
 }
 
