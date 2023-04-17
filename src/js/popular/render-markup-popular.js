@@ -4,12 +4,12 @@ import renderMarkup from '../render-markup';
 import { showSpinner, hideSpinner } from '../spiner';
 import { paginationRender } from '../pagination';
 
-async function renderPopulars() {
+async function renderPopulars(page) {
   showSpinner();
   try {
-    const popularData = await loadPopular();
+    const popularData = await loadPopular(page);
     renderMarkup(popularData);
-    paginationRender(popularData.total_results);
+    paginationRender(popularData.total_results, page);
   } catch (error) {
     onFetchError(error);
   }
