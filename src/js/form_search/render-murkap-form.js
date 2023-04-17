@@ -16,8 +16,9 @@ async function fetchSerchForm(evt) {
 
   try {
     const movies = await API.fetchMovie(inputValue);
+    console.log(movies);
 
-    paginationRender(movies.total_results);
+    paginationRender(movies.total_results, 1, inputValue);
 
     if (movies.results.length === 0) {
       Notiflix.Notify.info('Sorry, but nothing was found for your request');

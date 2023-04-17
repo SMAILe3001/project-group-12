@@ -5,6 +5,7 @@ import apiSearchForm from './form_search/load-form';
 import { refs } from './refs';
 import renderMarkupPopular from './popular/render-markup-popular';
 import fetchSerchFormPag from './form_search/render-murkap-form';
+import renderMovie from './render-markup';
 
 const options = {
   totalItems: 20000,
@@ -33,10 +34,19 @@ const options = {
   },
 };
 
-export function paginationRender(totalItems, page = 1) {
+export function paginationRender(totalItems, page = 1, query) {
   options.totalItems = totalItems;
   options.page = page;
   let pagination = new Pagination(refs.container, options);
+
+  if (query) {
+    pagination.on('beforeMove', async ({ page }) => {
+      const movies = await apiSearchForm.fetchMovie(query, page);
+      renderMovie(movies);
+      window.scrollTo(0, 0);
+    });
+    return;
+  }
 
   pagination.on('beforeMove', ({ page }) => {
     renderMarkupPopular.renderPopulars(page);
