@@ -1,3 +1,13 @@
+// To add or remove something use
+// local.(what you wanna add or remove from).addOrRemove(filmid)
+// for example
+// local.Queue.addOrRemove(123456)
+// if you need to check if something in Queue or Watched already(for buttons and stuff)
+// use local.Watched(or Queue).exist(filmid) it returns true or false
+// for example local.Watched.exist(123456)
+// if you need whole array just use local.Watched.value or local.Queue.value it will return array of film ids
+// gl team
+
 class Local {
   constructor() {
     this.Queue = new Queue();
