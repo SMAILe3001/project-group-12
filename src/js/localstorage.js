@@ -55,6 +55,10 @@ class Watched {
     localStorage.userWatched = JSON.stringify(this.arr);
   }
 
+  exist(id) {
+    return this.arr.includes(id);
+  }
+
   get value() {
     return this.arr;
   }
