@@ -3,6 +3,8 @@ import 'tui-pagination/dist/tui-pagination.css';
 import API from './popular/load-popular';
 import apiSearchForm from './form_search/load-form';
 import { refs } from './refs';
+import renderMarkupPopular from './popular/render-markup-popular';
+import fetchSerchFormPag from './form_search/render-murkap-form';
 
 const options = {
   totalItems: 20000,
@@ -31,7 +33,13 @@ const options = {
   },
 };
 
-export function paginationRender(totalItems) {
+export function paginationRender(totalItems, page = 1) {
   options.totalItems = totalItems;
-  const pagination = new Pagination(refs.container, options);
+  options.page = page;
+  let pagination = new Pagination(refs.container, options);
+
+  pagination.on('beforeMove', ({ page }) => {
+    renderMarkupPopular.renderPopulars(page);
+    window.scrollTo(0, 0);
+  });
 }
