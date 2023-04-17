@@ -18,7 +18,7 @@ function openWatched(evt) {
 
   refs.galleryFilms.innerHTML = '';
 
-  unfinishedFeedback = JSON.parse(evt);
+  let unfinishedFeedback = JSON.parse(evt);
 
   Object.entries(unfinishedFeedback).forEach(([name, value]) => {
     fetchFilm(value).then(renderMarkup);
