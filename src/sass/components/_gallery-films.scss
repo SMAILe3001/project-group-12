@@ -22,7 +22,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    gap: 14px;
+    gap: 32px 14px;
   }
 }
 
@@ -106,7 +106,8 @@
   display: flex;
 }
 @keyframes spinner-line-fade-more {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0; /* minimum opacity */
   }
   1% {
@@ -115,7 +116,9 @@
 }
 
 @keyframes spinner-line-fade-quick {
-  0%, 39%, 100% {
+  0%,
+  39%,
+  100% {
     opacity: 0.25; /* minimum opacity */
   }
   40% {
@@ -124,7 +127,8 @@
 }
 
 @keyframes spinner-line-fade-default {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.22; /* minimum opacity */
   }
   1% {
@@ -133,7 +137,9 @@
 }
 
 @keyframes spinner-line-shrink {
-  0%, 25%, 100% {
+  0%,
+  25%,
+  100% {
     /* minimum scale and opacity */
     transform: scale(0.5);
     opacity: 0.25;
@@ -141,5 +147,12 @@
   26% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+.tui-pagination {
+  margin: 40px !important;
+  @media screen and (min-width: $table-width) {
+    margin: 60px !important;
   }
 }
