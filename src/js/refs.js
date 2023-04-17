@@ -10,4 +10,6 @@ export const refs = {
   btnAddToQueue: document.querySelector('.btn-add-to-queue'),
   btnAddToWatched: document.querySelector('.btn-add-to-watched'),
   container: document.getElementById('tui-pagination-container'),
+  btnWatched: document.querySelector('.js-watched'),
+  btnQueue: document.querySelector('.js-queue'),
 };
