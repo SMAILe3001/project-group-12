@@ -43,13 +43,19 @@ export function paginationRender(totalItems, page = 1, query) {
     pagination.on('beforeMove', async ({ page }) => {
       const movies = await apiSearchForm.fetchMovie(query, page);
       renderMovie(movies);
-      window.scrollTo(0, 0);
+      window.scroll({
+        top: 0,
+        behavior: 'smooth',
+      });
     });
     return;
   }
 
   pagination.on('beforeMove', ({ page }) => {
     renderMarkupPopular.renderPopulars(page);
-    window.scrollTo(0, 0);
+    window.scroll({
+      top: 0,
+      behavior: 'smooth',
+    });
   });
 }
