@@ -10,17 +10,17 @@ import renderMovie from './render-markup';
 const options = {
   totalItems: 20000,
   itemsPerPage: 20,
-  visiblePages: 7,
+  visiblePages: 5,
   page: 1,
   centerAlign: true,
   firstItemClassName: 'tui-first-child',
   lastItemClassName: 'tui-last-child',
   template: {
-    page: '<a href="https://api.themoviedb.org/3/trending/movie/day?page={{page}}" class="tui-page-btn">{{page}}</a>',
+    page: '<a href="page={{page}}" class="tui-page-btn">{{page}}</a>',
     currentPage:
       '<strong class="tui-page-btn tui-is-selected">{{page}}</strong>',
     moveButton:
-      '<a href="https://api.themoviedb.org/3/trending/movie/day?page={{page}}" class="tui-page-btn tui-{{type}}">' +
+      '<a href="page={{page}}" class="tui-page-btn tui-{{type}}">' +
       '<span class="tui-ico-{{type}}">{{type}}</span>' +
       '</a>',
     disabledMoveButton:
@@ -28,7 +28,7 @@ const options = {
       '<span class="tui-ico-{{type}}">{{type}}</span>' +
       '</span>',
     moreButton:
-      '<a href="https://api.themoviedb.org/3/trending/movie/day?page={{page}}" class="tui-page-btn tui-{{type}}-is-ellip">' +
+      '<a href="page={{page}}" class="tui-page-btn tui-{{type}}-is-ellip">' +
       '<span class="tui-ico-ellip">...</span>' +
       '</a>',
   },

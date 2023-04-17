@@ -149,10 +149,3 @@
     opacity: 1;
   }
 }
-
-.tui-pagination {
-  margin: 40px !important;
-  @media screen and (min-width: $table-width) {
-    margin: 60px !important;
-  }
-}
