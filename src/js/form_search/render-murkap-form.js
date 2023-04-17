@@ -1,9 +1,10 @@
-// import axios from 'axios';
+import axios from 'axios';
 import Notiflix from 'notiflix';
 import API from './load-form';
 import { refs } from '../refs';
 import renderMovie from '../render-markup';
 import { showSpinner, hideSpinner } from '../spiner';
+import { paginationRender } from '../pagination';
 
 refs.form.addEventListener('submit', fetchSerchForm);
 
@@ -15,6 +16,8 @@ async function fetchSerchForm(evt) {
 
   try {
     const movies = await API.fetchMovie(inputValue);
+
+    paginationRender(movies.total_results);
 
     if (movies.results.length === 0) {
       Notiflix.Notify.info('Sorry, but nothing was found for your request');
