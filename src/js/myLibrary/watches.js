@@ -4,7 +4,7 @@ import { refs } from '../refs';
 
 refs.btnWatched.addEventListener('click', openWatched);
 
-async function openWatched(evt) {
+function openWatched(evt) {
   evt = localStorage.getItem('userWatched');
   refs.btnWatched.disabled = true;
   refs.btnQueue.disabled = false;
@@ -18,9 +18,9 @@ async function openWatched(evt) {
 
   refs.galleryFilms.innerHTML = '';
 
-  unfinishedFeedback = await JSON.parse(evt);
+  unfinishedFeedback = JSON.parse(evt);
 
-  await Object.entries(unfinishedFeedback).forEach(([name, value]) => {
+  Object.entries(unfinishedFeedback).forEach(([name, value]) => {
     fetchFilm(value).then(renderMarkup);
   });
 }
