@@ -1,29 +1,19 @@
 .header__container {
-  height: 100vh;
-
-  padding: 20px;
+  padding: 14px 14px 20px 14px;
   background-image: url(../images/header-mobile.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  @media screen and (min-width: $mobile-width) {
-    margin-top: 20px;
-    padding: 16px;
-    width: 460px;
-  }
+  border-radius: 10px;
 
   @media screen and (min-width: $table-width) {
-    margin-top: 32px;
-    padding: 16px;
-    width: 704px;
     height: 222px;
+    padding: 16px;
     background-image: url(../images/header-tablet.jpg);
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 16px 32px;
-    width: 1216px;
+    padding: 16px 32px 32px 32px;
     height: 316px;
     background-image: url(../images/header-desktop.jpg);
   }
@@ -33,7 +23,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 8px;
 
   @media screen and (min-width: $table-width) {
     gap: 8px;
@@ -101,6 +91,8 @@
 }
 
 .menu-list__link {
+  display: block;
+
   padding: 14px 24px;
   background: #ffffff;
   border-radius: 100px;
@@ -131,9 +123,10 @@
 
   @media screen and (min-width: $table-width) {
     margin-top: 105px;
+    width: 260px;
   }
   @media screen and (min-width: $desktop-width) {
-    margin-top: 164px;
+    margin-top: 175px;
   }
 }
 
@@ -149,7 +142,6 @@
   font-weight: 500;
   font-size: 44px;
   color: #ffffff;
-  width: 250px;
 
   @media screen and (min-width: $table-width) {
     justify-content: start;
