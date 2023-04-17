@@ -15,15 +15,16 @@ async function loadFilmInfo(movieID) {
 }
 
 function handleAddToQueue() {
-  //console.log('Add To Queue ' + filmID);
-  local.Queue.addOrRemove(filmID);
-  console.log(local.Queue.value);
+    local.Queue.addOrRemove(filmID);
+    console.log(local.Queue.value);
+    refs.btnAddToQueue.classList.toggle('modal-button__active');
 }
 
 function handleAddToWatched() {
   //console.log('Add To Watching ' + filmID);
   local.Watched.addOrRemove(filmID);
-  console.log(local.Watched.value);
+    console.log(local.Watched.value);
+    refs.btnAddToWatched.classList.toggle('modal-button__active');
 }
 
 function handleCloseModal() {
@@ -35,10 +36,21 @@ function handleCloseModal() {
 }
 
 function renderFilmInfo(film) {
-  console.log(film);
-  refs.filmInfoCardImage.innerHTML = `<img class="film-info-card__poster" src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt="poster">`;
-  film.vote_average = Math.round(film.vote_average * 10) / 10;
-  refs.filmInfoCardBloque.innerHTML = filmDescriptionCreate(film);
+    console.log(film);
+    // дописать дефолтный постер если его нет
+    refs.filmInfoCardImage.innerHTML = `<img class="film-info-card__poster" src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt="poster">`;
+    film.vote_average = Math.round(film.vote_average * 10) / 10;
+    refs.filmInfoCardBloque.innerHTML = filmDescriptionCreate(film);
+    if (local.Queue.exist(filmID)) {
+        refs.btnAddToQueue.classList.add('modal-button__active');
+    } else {
+        refs.btnAddToQueue.classList.remove('modal-button__active');
+    }
+    if (local.Watched.exist(filmID)) {
+        refs.btnAddToWatched.classList.add('modal-button__active');
+    } else {
+        refs.btnAddToWatched.classList.remove('modal-button__active');
+    }
 }
 
 function handleFilmCardClick(ev) {
