@@ -5,15 +5,10 @@
 // }
 
 .header-mylibrary__nav--logo {
+  justify-content: space-between;
+  align-items: baseline;
   @media screen and (min-width: $table-width) {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-
-  @media screen and (max-width: $table-width) {
-    display: flex;
-    flex-wrap: wrap;
   }
 }
 
@@ -25,7 +20,8 @@
 
 .header-mylibrary__btn {
   @media screen and (max-width: $table-width) {
-    margin-left: 44px;
+    display: flex;
+    justify-content: center;
   }
 }
 
