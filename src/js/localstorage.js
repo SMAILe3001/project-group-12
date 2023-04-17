@@ -7,6 +7,10 @@
 // for example local.Watched.exist(123456)
 // if you need whole array just use local.Watched.value or local.Queue.value it will return array of film ids
 // gl team
+//
+//
+// Also to use lib import it like so:
+// import local from './localstorage';
 
 class Local {
   constructor() {
