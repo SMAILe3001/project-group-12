@@ -13,18 +13,20 @@ async function loadFilmInfo(movieID) {
     throw new Error(response.statusText);
 };
 
-function handleAddToQueue(filmIdentity) {
-        console.log("Add To Queue " + filmIdentity);
+function handleAddToQueue() {
+        console.log("Add To Queue " + filmID);
     }    
 
-function handleAddToWatching(filmIdentity) {
-        console.log("Add To Watching " + filmIdentity);
+function handleAddToWatched() {
+        console.log("Add To Watching " + filmID);
     }        
     
 function handleCloseModal() {
         refs.backdrop.classList.add("is-hidden");
-        refs.btnAddToWatched.removeEventListener("click", handleAddToWatching);
+        refs.btnAddToWatched.removeEventListener("click", handleAddToWatched);
         refs.btnAddToQueue.removeEventListener("click", handleAddToQueue);
+        refs.filmInfoCardImage.innerHTML = "";
+        refs.filmInfoCardBloque.innerHTML = "";
     }
     
 function renderFilmInfo(film) {
@@ -39,9 +41,9 @@ function handleFilmCardClick(ev) {
             filmID = targetObject.dataset.id;
             refs.backdrop.classList.remove("is-hidden");
             refs.modalClose.addEventListener("click", handleCloseModal);
-            refs.btnAddToQueue.addEventListener("click", handleAddToQueue(filmID));
-            refs.btnAddToWatched.addEventListener("click", handleAddToWatching(filmID));
-            console.log(refs);
+            refs.btnAddToQueue.addEventListener("click", handleAddToQueue);
+            refs.btnAddToWatched.addEventListener("click", handleAddToWatched);
+//            refs.backdrop.addEventListener("click", handleCloseModal);
 
             loadFilmInfo(filmID).then(renderFilmInfo);
         }

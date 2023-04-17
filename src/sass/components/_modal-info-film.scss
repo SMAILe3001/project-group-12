@@ -33,15 +33,19 @@
   display: flex;
 }
 
-.button-close__icon {
+.film-info-card__button-close {
   position: fixed;
   top: 8px;
   right: 8px;
   width: 30px;
   height: 30px;
+  border: 0;
   color: $color-primary-dark;
-  // background-color: $color-primary-background;
+  background-color: $color-primary-background;
   cursor: pointer;
+}
+
+.button-close__icon {
 }
 
 .film-info__description-label {
@@ -126,6 +130,33 @@
 
 .film-info-card__bloque {
   width: 391px;
+}
+
+.film-info-details__list {
+  list-style: none;
+  padding: 0;
+}
+
+.film-info-details__element {
+  display: flex;
+}
+
+.film-info-details__value {
+  margin-left: 20px;
+  font-weight: 400;
+  color: #888;
+}
+
+.film-info-card__buttons {
+  padding-top: 20px;
+}
+
+.modal-button {
+  border-radius: 8px;
+  background-color: $color-primary-background;
+  border: red solid 1px;
+  padding: 10px;
+  margin-right: 10px;
 }
 
 // .film-card__description-title {
