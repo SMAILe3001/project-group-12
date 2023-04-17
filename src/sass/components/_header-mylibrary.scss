@@ -1,8 +1,35 @@
-.header-mylibrary__nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
+.logo__link {
+  @media   screen and (max-width: $table-width) {
+    margin-left: 44px;
+  }
+}
+
+
+.header-mylibrary__nav--logo {
+
+@media   screen and (min-width: $table-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  @media   screen and (max-width: $table-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.header-mylibrary__nav {
+  @media   screen and (max-width: $table-width) {
+    margin-bottom: 16px;
+  }
+}
+
+.header-mylibrary__btn {
+  @media   screen and (max-width: $table-width) {
+    margin-left: 44px;
+  }
 }
 
 .library__button {
