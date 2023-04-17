@@ -18,7 +18,7 @@ async function openQueue(evt) {
 
   refs.galleryFilms.innerHTML = '';
 
-  unfinishedFeedback = JSON.parse(evt);
+  unfinishedFeedback = await JSON.parse(evt);
 
   await Object.entries(unfinishedFeedback).forEach(([name, value]) => {
     fetchFilm(value).then(renderMarkup);
