@@ -14,11 +14,13 @@
   position: absolute;
   width: 280px;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  transform: translate(-50%, 0);
   padding: 48px 20px 40px 20px;
 
   @include tablet {
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 704px;
     padding: 40px 36px 64px 36px;
   }
