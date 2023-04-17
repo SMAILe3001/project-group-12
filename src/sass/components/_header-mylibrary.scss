@@ -1,33 +1,30 @@
-
-.logo__link {
-  @media   screen and (max-width: $table-width) {
-    margin-left: 44px;
-  }
-}
-
+// .logo__link {
+//   @media   screen and (max-width: $table-width) {
+//     margin-left: 44px;
+//   }
+// }
 
 .header-mylibrary__nav--logo {
-
-@media   screen and (min-width: $table-width) {
+  @media screen and (min-width: $table-width) {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
   }
 
-  @media   screen and (max-width: $table-width) {
+  @media screen and (max-width: $table-width) {
     display: flex;
     flex-wrap: wrap;
   }
 }
 
 .header-mylibrary__nav {
-  @media   screen and (max-width: $table-width) {
+  @media screen and (max-width: $table-width) {
     margin-bottom: 16px;
   }
 }
 
 .header-mylibrary__btn {
-  @media   screen and (max-width: $table-width) {
+  @media screen and (max-width: $table-width) {
     margin-left: 44px;
   }
 }
@@ -42,13 +39,13 @@
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
-  color: #B92F2C;
+  color: #b92f2c;
   text-decoration: none;
 }
 
 .library__button:hover,
 .library__button:focus {
-  background-color: #B92F2C;
+  background-color: #b92f2c;
   color: #fff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
