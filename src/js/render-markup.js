@@ -5,17 +5,19 @@ import { imgUrl } from './refs';
 export default function renderMarkup(films) {
   const createdElements = films.results
     .map(film => {
-<<<<<<< Updated upstream
-      if (film.genre_ids.length === 1 || film.genre_ids.length === 2 || film.genre_ids.length > 2 && film.release_date === '') {
-=======
-      console.log(film.release_date) 
-      if (film.genre_ids.length < 2 && film.genre_ids.length !== 0 && film.release_date === '') {
->>>>>>> Stashed changes
+      console.log(film.release_date);
+      if (
+        film.genre_ids.length < 2 &&
+        film.genre_ids.length !== 0 &&
+        film.release_date === ''
+      ) {
         const cardFilm = ` 
       <div class="film-card" data-id=${film.id}>
-        <img class="film-poster" src="${film.poster_path === null
-          ? `${imgUrl}`
-          : `https://image.tmdb.org/t/p/w500${film.poster_path}`}" 
+        <img class="film-poster" src="${
+          film.poster_path === null
+            ? `${imgUrl}`
+            : `https://image.tmdb.org/t/p/w500${film.poster_path}`
+        }" 
           alt="poster">
         <h2 class="film-title">${film.original_title}</h2>
         <div class="film-info">
@@ -25,13 +27,14 @@ export default function renderMarkup(films) {
         </div>
       </div>`;
         return cardFilm;
-
       } else if (film.genre_ids.length > 2 && film.release_date === '') {
         const cardFilm = `
       <div class="film-card" data-id=${film.id}>
-        <img class="film-poster" src="${film.poster_path === null
-          ? `${imgUrl}`
-          : `https://image.tmdb.org/t/p/w500${film.poster_path}`}" 
+        <img class="film-poster" src="${
+          film.poster_path === null
+            ? `${imgUrl}`
+            : `https://image.tmdb.org/t/p/w500${film.poster_path}`
+        }" 
           alt="poster">
         <h2 class="film-title">${film.original_title}</h2>
         <div class="film-info">
@@ -42,13 +45,14 @@ export default function renderMarkup(films) {
         </div>
       </div>`;
         return cardFilm;
-
       } else if (film.genre_ids.length === 0 && film.release_date === '') {
         const cardFilm = `
       <div class="film-card" data-id=${film.id}>
-        <img class="film-poster" src="${film.poster_path === null
-          ? `${imgUrl}`
-          : `https://image.tmdb.org/t/p/w500${film.poster_path}`}" 
+        <img class="film-poster" src="${
+          film.poster_path === null
+            ? `${imgUrl}`
+            : `https://image.tmdb.org/t/p/w500${film.poster_path}`
+        }" 
           alt="poster">
         <h2 class="film-title">${film.original_title}</h2>
         <div class="film-info">
@@ -56,13 +60,14 @@ export default function renderMarkup(films) {
         </div>
       </div>`;
         return cardFilm;
-
       } else if (film.genre_ids.length === 0 && film.release_date !== '') {
         const cardFilm = `
       <div class="film-card" data-id=${film.id}>
-        <img class="film-poster" src="${film.poster_path === null
-          ? `${imgUrl}`
-          : `https://image.tmdb.org/t/p/w500${film.poster_path}`}" 
+        <img class="film-poster" src="${
+          film.poster_path === null
+            ? `${imgUrl}`
+            : `https://image.tmdb.org/t/p/w500${film.poster_path}`
+        }" 
           alt="poster">
         <h2 class="film-title">${film.original_title}</h2>
         <div class="film-info">
@@ -70,13 +75,14 @@ export default function renderMarkup(films) {
         </div>
       </div>`;
         return cardFilm;
-
       } else if (film.genre_ids.length < 2 && film.genre_ids.length !== 0) {
         const cardFilm = ` 
       <div class="film-card" data-id=${film.id}>
-        <img class="film-poster" src="${film.poster_path === null
-          ? `${imgUrl}`
-          : `https://image.tmdb.org/t/p/w500${film.poster_path}`}" 
+        <img class="film-poster" src="${
+          film.poster_path === null
+            ? `${imgUrl}`
+            : `https://image.tmdb.org/t/p/w500${film.poster_path}`
+        }" 
           alt="poster">
         <h2 class="film-title">${film.original_title}</h2>
         <div class="film-info">
@@ -86,13 +92,14 @@ export default function renderMarkup(films) {
         </div>
       </div>`;
         return cardFilm;
-
       } else if (film.genre_ids.length > 2 && film.genre_ids.length !== 0) {
         const cardFilm = `
       <div class="film-card" data-id=${film.id}>
-        <img class="film-poster" src="${film.poster_path === null
-          ? `${imgUrl}`
-          : `https://image.tmdb.org/t/p/w500${film.poster_path}`}" 
+        <img class="film-poster" src="${
+          film.poster_path === null
+            ? `${imgUrl}`
+            : `https://image.tmdb.org/t/p/w500${film.poster_path}`
+        }" 
           alt="poster">
         <h2 class="film-title">${film.original_title}</h2>
         <div class="film-info">
