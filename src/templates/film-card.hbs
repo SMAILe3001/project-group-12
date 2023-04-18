@@ -1,0 +1,10 @@
+      <li class="film-card" data-id={{id}}>
+        <img class="film-poster" src="{{#if poster_path}}https://image.tmdb.org/t/p/w500{{poster_path}}{{else}}defIMG{{/if}}"
+          alt="poster">
+        <h2 class="film-title">{{original_title}}</h2>
+        <div class="film-info">
+        {{#if details}}
+            <span class="film-details">{{details}}</span>
+        {{/if}}
+        </div>
+      </li>
