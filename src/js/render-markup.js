@@ -1,14 +1,19 @@
 import { genres } from './genres';
 import { refs } from './refs';
+import { imgUrl } from './refs';
 
 export default function renderMarkup(films) {
   const createdElements = films.results
+<<<<<<< Updated upstream
     .map(film => {  console.log(film.poster_path)
+=======
+    .map(film => {
+>>>>>>> Stashed changes
       if (film.genre_ids.length <= 2) {
         const cardFilm = `
       <div class="film-card" data-id=${film.id}>
         <img class="film-poster" src="${film.poster_path === null
-          ? `${refs.altPoster}`
+          ? `${imgUrl}`
           : `https://image.tmdb.org/t/p/w500${film.poster_path}`}" 
           alt="poster">
         <h2 class="film-title">${film.original_title}</h2>
@@ -23,7 +28,7 @@ export default function renderMarkup(films) {
         const cardFilm = `
       <div class="film-card" data-id=${film.id}>
         <img class="film-poster" src="${film.poster_path === null
-          ? `${refs.altPoster}`
+          ? `${imgUrl}`
           : `https://image.tmdb.org/t/p/w500${film.poster_path}`}" 
           alt="poster">
         <h2 class="film-title">${film.original_title}</h2>

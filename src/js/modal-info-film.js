@@ -2,6 +2,7 @@ import { BASE_URL, API_KEY } from './api';
 import { refs } from './refs';
 import filmDescriptionCreate from '../templates/film-description.hbs';
 import local from './localstorage';
+import { imgUrl } from './refs';
 
 let filmID = null;
 
@@ -41,7 +42,7 @@ function renderFilmInfo(film) {
     console.log(film);
     // дописать дефолтный постер если его нет
     refs.filmInfoCardImage.innerHTML = `<img class="film-info-card__poster" src="${film.poster_path === null
-        ? `${refs.altPoster}`
+        ? `${imgUrl}`
         : `https://image.tmdb.org/t/p/w500${film.poster_path}`}" alt="poster">`;
     film.vote_average = Math.round(film.vote_average * 10) / 10;
     refs.filmInfoCardBloque.innerHTML = filmDescriptionCreate(film);
