@@ -1,28 +1,28 @@
-import { developers } from "./developersCard";
+import { developers } from './developersCard';
 import '@fortawesome/fontawesome-free/js/brands';
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
 const refs = {
-    footer: document.querySelector('.footer'),
-  
-    openModalBtnFoot: document.querySelector('[data-action="open-modal"]'),
-    closeModalBtnFoot: document.querySelector('[data-action="close-modal"]'),
-    backdropTeamFoot: document.querySelector('.js-backdrop'),
-  
-    team: document.querySelector('.dev-set'),
-  };
-  
-  const developersBoard = document.querySelector('.js-dev-set');
-  developersBoard.innerHTML = personalCard(developers);
-  
-  refs.openModalBtnFoot.addEventListener('click', onOpenModal);
-  refs.backdropTeamFoot.addEventListener('click', onBackdropClick);
-  refs.closeModalBtnFoot.addEventListener('click', onCloseModal);
-  
-  function personalCard(developers) {
-    const markup = developers
-      .map(({ image, name, role, instagram, github, linkedin, facebook }) => {
-        return `
+  footer: document.querySelector('.footer'),
+
+  openModalBtnFoot: document.querySelector('[data-action="open-modal"]'),
+  closeModalBtnFoot: document.querySelector('[data-action="close-modal"]'),
+  backdropTeamFoot: document.querySelector('.js-backdrop'),
+
+  team: document.querySelector('.dev-set'),
+};
+
+const developersBoard = document.querySelector('.js-dev-set');
+developersBoard.innerHTML = personalCard(developers);
+
+refs.openModalBtnFoot.addEventListener('click', onOpenModal);
+refs.backdropTeamFoot.addEventListener('click', onBackdropClick);
+refs.closeModalBtnFoot.addEventListener('click', onCloseModal);
+
+function personalCard(developers) {
+  const markup = developers
+    .map(({ image, name, role, instagram, github, linkedin, facebook }) => {
+      return `
           <li class='devcont-item'>
     <a href="#" class='devcont-link'>
       <div class='devcont-imgbox'>
@@ -60,39 +60,38 @@ const refs = {
     </a>
   </li>
           `;
-      })
-      .join('');
-    return markup;
+    })
+    .join('');
+  return markup;
+}
+
+function onOpenModal() {
+  window.addEventListener('keydown', onEscKeyPress);
+  refs.backdropTeamFoot.classList.remove('is-hidden');
+  refs.backdropTeamFoot.classList.remove('show-modal');
+  const body = document.body;
+  body.style.overflowY = 'hidden';
+}
+
+function onCloseModal() {
+  window.removeEventListener('keydown', onEscKeyPress);
+  refs.backdropTeamFoot.classList.remove('show-modal');
+  refs.backdropTeamFoot.classList.add('is-hidden');
+  const body = document.body;
+  body.style.overflowY = '';
+}
+
+function onBackdropClick(event) {
+  if (event.currentTarget === event.target) {
+    onCloseModal();
   }
-  
-  function onOpenModal() {
-    window.addEventListener('keydown', onEscKeyPress);
-    refs.backdropTeamFoot.classList.remove('is-hidden');
-    refs.backdropTeamFoot.classList.remove('show-modal');
-    const body = document.body
-      body.style.overflowY = 'hidden'
+}
+
+function onEscKeyPress(event) {
+  const ESC_KEY_CODE = 'Escape';
+  const isEscKey = event.code === ESC_KEY_CODE;
+
+  if (isEscKey) {
+    onCloseModal();
   }
-  
-  function onCloseModal() {
-    window.removeEventListener('keydown', onEscKeyPress);
-    refs.backdropTeamFoot.classList.remove('show-modal');
-    refs.backdropTeamFoot.classList.add('is-hidden');
-    const body = document.body
-      body.style.overflowY = ''
-  }
-  
-  function onBackdropClick(event) {
-    if (event.currentTarget === event.target) {
-      onCloseModal();
-    }
-  }
-  
-  function onEscKeyPress(event) {
-    const ESC_KEY_CODE = 'Escape';
-    const isEscKey = event.code === ESC_KEY_CODE;
-  
-    if (isEscKey) {
-      onCloseModal();
-    }
-  }
-  
+}
