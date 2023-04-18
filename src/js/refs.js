@@ -12,5 +12,6 @@ export const refs = {
   container: document.getElementById('tui-pagination-container'),
   btnWatched: document.querySelector('.js-watched'),
   btnQueue: document.querySelector('.js-queue'),
-  altPoster: 'https://st3.depositphotos.com/1002881/12778/i/600/depositphotos_127782438-stock-photo-error-404-page-not-found.jpg',
 };
+
+export const imgUrl = new URL('../images/alt-poster.jpg', import.meta.url);
