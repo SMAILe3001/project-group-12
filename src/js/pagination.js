@@ -1,10 +1,8 @@
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
-import API from './popular/load-popular';
 import apiSearchForm from './form_search/load-form';
 import { refs } from './refs';
 import renderMarkupPopular from './popular/render-markup-popular';
-import fetchSerchFormPag from './form_search/render-murkap-form';
 import renderMovie from './render-markup';
 
 const options = {
