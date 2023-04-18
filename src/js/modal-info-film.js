@@ -3,6 +3,7 @@ import { refs } from './refs';
 import filmDescriptionCreate from '../templates/film-description.hbs';
 import local from './localstorage';
 import { imgUrl } from './refs';
+import RGF from './myLibrary/rezer-render';
 
 let filmID = null;
 
@@ -47,7 +48,7 @@ function handleCloseModal() {
 }
 
 function renderFilmInfo(film) {
-  console.log(film);
+  // console.log(film);
   // дописать дефолтный постер если его нет
   refs.filmInfoCardImage.innerHTML = `<img class="film-info-card__poster" src="${
     film.poster_path === null
@@ -73,6 +74,7 @@ function renderFilmInfo(film) {
 }
 
 function handleFilmCardClick(ev) {
+  RGF();
   const targetObject = ev.target.closest('.film-card');
   if (targetObject) {
     filmID = targetObject.dataset.id;
