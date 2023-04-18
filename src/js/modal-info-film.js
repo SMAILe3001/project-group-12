@@ -17,7 +17,7 @@ async function loadFilmInfo(movieID) {
 
 function handleAddToQueue() {
   local.Queue.addOrRemove(filmID);
-  console.log(local.Queue.value);
+  //console.log(local.Queue.value);
   refs.btnAddToQueue.classList.toggle('modal-button__active');
   if (local.Queue.exist(filmID)) {
     refs.btnAddToQueue.textContent = 'Remove From Queue';
@@ -27,9 +27,8 @@ function handleAddToQueue() {
 }
 
 function handleAddToWatched() {
-  //console.log('Add To Watching ' + filmID);
   local.Watched.addOrRemove(filmID);
-  console.log(local.Watched.value);
+  //console.log(local.Watched.value);
   refs.btnAddToWatched.classList.toggle('modal-button__active');
   if (local.Watched.exist(filmID)) {
     refs.btnAddToWatched.textContent = 'Remove From Watched';
