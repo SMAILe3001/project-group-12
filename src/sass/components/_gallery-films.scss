@@ -12,17 +12,19 @@
   min-height: 500px;
   position: relative;
   display: flex;
-  align-items: center;
+
+  align-items: start;
   justify-content: start;
   flex-wrap: wrap;
   gap: 20px;
 
   @media screen and (min-width: $table-width) {
     gap: 32px;
+    justify-content: center;
   }
 
   @media screen and (min-width: $desktop-width) {
-    gap: 32px 14px;
+    gap: 32px 16px;
   }
 }
 
