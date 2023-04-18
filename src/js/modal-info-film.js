@@ -40,7 +40,9 @@ function handleCloseModal() {
 function renderFilmInfo(film) {
     console.log(film);
     // дописать дефолтный постер если его нет
-    refs.filmInfoCardImage.innerHTML = `<img class="film-info-card__poster" src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt="poster">`;
+    refs.filmInfoCardImage.innerHTML = `<img class="film-info-card__poster" src="${film.poster_path === null
+        ? `${refs.altPoster}`
+        : `https://image.tmdb.org/t/p/w500${film.poster_path}`}" alt="poster">`;
     film.vote_average = Math.round(film.vote_average * 10) / 10;
     refs.filmInfoCardBloque.innerHTML = filmDescriptionCreate(film);
     if (local.Queue.exist(filmID)) {
