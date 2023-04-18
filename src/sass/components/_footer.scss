@@ -42,11 +42,20 @@ footer {
 }
 
 .footer__team-link {
-  display: inline-block;
+  display: inline;
   color: #545454;
+  text-decoration: underline;
+ 
+}
+
+.footer__team-link:hover {
+    cursor: pointer;
+    color: #ff6b08;
+    text-decoration: underline;
 }
 
 @keyframes heartbeat {
+
   0% {
   }
   40% {
