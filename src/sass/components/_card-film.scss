@@ -20,14 +20,16 @@
 }
 
 .film-poster {
+  object-fit: cover;
   min-width: 280px;
   border-radius: 5px;
   @media screen and (min-width: $table-width) {
-    max-width: 336px;
-    min-width: 100%;
+    width: 336;
+    height: 455;
   }
   @media screen and (min-width: $desktop-width) {
-    min-width: 396px;
+    width: 395px;
+    height: 574px;
   }
 }
 
