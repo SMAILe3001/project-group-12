@@ -6,9 +6,7 @@ export default function renderMarkup(films) {
   const createdElements = films.results
     .map(film => {
       if (
-        film.genre_ids.length < 2 &&
-        film.genre_ids.length !== 0 &&
-        film.release_date === ''
+        film.genre_ids.length =< 2 && film.genre_ids.length !== 0 && film.release_date === ''
       ) {
         const cardFilm = ` 
       <li class="film-card" data-id=${film.id}>
