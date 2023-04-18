@@ -1,3 +1,5 @@
+import updatingListMovies from './updating-list-movies';
+
 export default function rezetGalleryFilm() {
   let activePage = document.querySelector(
     '.menu-list__link--active'
@@ -12,7 +14,8 @@ export default function rezetGalleryFilm() {
   ).textContent;
 
   if (activeWatch === 'Queue') {
-    console.log('тут рендер очереди');
+    updatingListMovies('userQueue');
+    return;
   }
-  console.log('тут рендер просмотрених');
+  updatingListMovies('userWatched');
 }

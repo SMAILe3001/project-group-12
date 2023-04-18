@@ -3,7 +3,7 @@ import { refs } from './refs';
 import filmDescriptionCreate from '../templates/film-description.hbs';
 import local from './localstorage';
 import { imgUrl } from './refs';
-import RGF from './myLibrary/rezer-render';
+import rezetGalleryFilm from './myLibrary/rezer-render';
 
 let filmID = null;
 
@@ -18,24 +18,24 @@ async function loadFilmInfo(movieID) {
 
 function handleAddToQueue() {
   local.Queue.addOrRemove(filmID);
-  //console.log(local.Queue.value);
   refs.btnAddToQueue.classList.toggle('modal-button__active');
   if (local.Queue.exist(filmID)) {
     refs.btnAddToQueue.textContent = 'Remove From Queue';
   } else {
     refs.btnAddToQueue.textContent = 'Add to Queue';
   }
+  rezetGalleryFilm();
 }
 
 function handleAddToWatched() {
   local.Watched.addOrRemove(filmID);
-  //console.log(local.Watched.value);
   refs.btnAddToWatched.classList.toggle('modal-button__active');
   if (local.Watched.exist(filmID)) {
     refs.btnAddToWatched.textContent = 'Remove From Watched';
   } else {
     refs.btnAddToWatched.textContent = 'Add to Watched';
   }
+  rezetGalleryFilm();
 }
 
 function handleCloseModal() {
@@ -48,7 +48,6 @@ function handleCloseModal() {
 }
 
 function renderFilmInfo(film) {
-  // console.log(film);
   // дописать дефолтный постер если его нет
   refs.filmInfoCardImage.innerHTML = `<img class="film-info-card__poster" src="${
     film.poster_path === null
@@ -74,7 +73,6 @@ function renderFilmInfo(film) {
 }
 
 function handleFilmCardClick(ev) {
-  RGF();
   const targetObject = ev.target.closest('.film-card');
   if (targetObject) {
     filmID = targetObject.dataset.id;
