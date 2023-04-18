@@ -28,12 +28,13 @@
         </td>                
     </tr>
     <tr>
+        {{#if genres}}
         <td class="film-info-details__text">
           Genre
         </td>
         <td class="film-info-details__value">
           {{#each genres}}{{#if @index}}, {{/if}}{{name}}{{/each}}
-        </td>                
+        </td>{{/if}}
     </tr>        
 </table>
 

@@ -17,7 +17,6 @@ async function loadFilmInfo(movieID) {
 
 function handleAddToQueue() {
   local.Queue.addOrRemove(filmID);
-  //console.log(local.Queue.value);
   refs.btnAddToQueue.classList.toggle('modal-button__active');
   if (local.Queue.exist(filmID)) {
     refs.btnAddToQueue.textContent = 'Remove From Queue';
@@ -28,7 +27,6 @@ function handleAddToQueue() {
 
 function handleAddToWatched() {
   local.Watched.addOrRemove(filmID);
-  //console.log(local.Watched.value);
   refs.btnAddToWatched.classList.toggle('modal-button__active');
   if (local.Watched.exist(filmID)) {
     refs.btnAddToWatched.textContent = 'Remove From Watched';
@@ -47,7 +45,6 @@ function handleCloseModal() {
 }
 
 function renderFilmInfo(film) {
-  console.log(film);
   // дописать дефолтный постер если его нет
   refs.filmInfoCardImage.innerHTML = `<img class="film-info-card__poster" src="${
     film.poster_path === null

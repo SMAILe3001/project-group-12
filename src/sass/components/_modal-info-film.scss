@@ -234,10 +234,13 @@
   cursor: pointer;
 }
 
-.modal-button__active,
-.modal-button:hover,
-.modal-button:focus {
+.modal-button__active {
   background-color: $color-active;
   color: #ffffff;
   border: 1px solid $color-active;
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.85);
 }
