@@ -5,13 +5,7 @@ import { imgUrl } from './refs';
 export default function renderMarkup(films) {
   const createdElements = films.results
     .map(film => {
-<<<<<<< Updated upstream
-      if (
-        film.genre_ids.length =< 2 && film.genre_ids.length !== 0 && film.release_date === ''
-      ) {
-=======
       if (film.genre_ids.length <= 2 && film.genre_ids.length !== 0 && film.release_date === '') {
->>>>>>> Stashed changes
         const cardFilm = ` 
       <li class="film-card" data-id=${film.id}>
         <img class="film-poster" src="${
