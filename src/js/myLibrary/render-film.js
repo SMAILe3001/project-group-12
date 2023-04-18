@@ -1,4 +1,6 @@
-export function renderMarkup(film) {
+import { refs } from '../refs';
+
+export function renderFilm(film) {
   const cardFilm = `<div class="film-card" data-id=${film.id}>
      <img class="film-poster" src="https://image.tmdb.org/t/p/w500${
        film.poster_path

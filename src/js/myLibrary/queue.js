@@ -1,6 +1,6 @@
-import axios from 'axios';
-import { BASE_URL, API_KEY } from '../api';
 import { refs } from '../refs';
+import { renderFilm } from './render-film';
+import { fetchFilm } from './fetch-film';
 
 refs.btnQueue.addEventListener('click', openQueue);
 
@@ -18,42 +18,11 @@ function openQueue(evt) {
 
   refs.galleryFilms.innerHTML = '';
 
-  let unfinishedFeedback = JSON.parse(evt);
+  let listId = JSON.parse(evt);
 
-  Object.entries(unfinishedFeedback).forEach(([name, value]) => {
-    fetchFilm(value).then(renderMarkup);
+  Object.entries(listId).forEach(([name, value]) => {
+    fetchFilm(value).then(renderFilm);
   });
-}
-
-async function fetchFilm(id) {
-  try {
-    const response = await axios.get(`${BASE_URL}/movie/${id}`, {
-      params: {
-        api_key: API_KEY,
-      },
-    });
-
-    return response.data;
-  } catch (error) {
-    console.error('There was an error!', error);
-    throw error;
-  }
-}
-
-function renderMarkup(film) {
-  const cardFilm = `<div class="film-card" data-id=${film.id}>
-     <img class="film-poster" src="https://image.tmdb.org/t/p/w500${
-       film.poster_path
-     }" alt="poster">
-     <h2 class="film-title">${film.original_title}</h2>
-     <div class="film-info">
-     <span class="film-details">${film.genres
-       .map(({ name }) => name)
-       .join(', ')} | ${film.release_date.substr(0, 4)}</span>
-    </div>
-</div>`;
-
-  refs.galleryFilms.insertAdjacentHTML('beforeend', cardFilm);
 }
 
 export default openQueue;
