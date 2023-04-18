@@ -5,12 +5,7 @@ import { imgUrl } from './refs';
 export default function renderMarkup(films) {
   const createdElements = films.results
     .map(film => {
-      console.log(film.release_date);
-      if (
-        film.genre_ids.length < 2 &&
-        film.genre_ids.length !== 0 &&
-        film.release_date === ''
-      ) {
+      if (film.genre_ids.length < 2 && film.genre_ids.length !== 0 && film.release_date === '') {
         const cardFilm = ` 
       <div class="film-card" data-id=${film.id}>
         <img class="film-poster" src="${
