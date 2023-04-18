@@ -8,7 +8,7 @@ export default function renderMarkup(films) {
         const cardFilm = `
       <div class="film-card" data-id=${film.id}>
         <img class="film-poster" src="${film.poster_path === null
-          ? `https://i.ytimg.com/vi/SLDYvwfNTMc/hqdefault.jpg`
+          ? `${refs.altPoster}`
           : `https://image.tmdb.org/t/p/w500${film.poster_path}`}" 
           alt="poster">
         <h2 class="film-title">${film.original_title}</h2>
@@ -23,7 +23,7 @@ export default function renderMarkup(films) {
         const cardFilm = `
       <div class="film-card" data-id=${film.id}>
         <img class="film-poster" src="${film.poster_path === null
-          ? `https://i.ytimg.com/vi/SLDYvwfNTMc/hqdefault.jpg`
+          ? `${refs.altPoster}`
           : `https://image.tmdb.org/t/p/w500${film.poster_path}`}" 
           alt="poster">
         <h2 class="film-title">${film.original_title}</h2>
