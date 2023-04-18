@@ -26,7 +26,7 @@ export function renderFilm(film) {
          ? `${imgUrl}`
          : `https://image.tmdb.org/t/p/w500${film.poster_path}`
      }" alt="poster" loading="lazy">
-     <h2 class="film-title">${film.original_title}</h2>
+     <h2 class="film-title">${film.title}</h2>
      <div class="film-info">  
      <span class="film-details">${getGanres(film)} | ${getReleaseDate(
     film

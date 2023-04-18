@@ -1,4 +1,3 @@
-import axios from 'axios';
 import Notiflix from 'notiflix';
 import API from './load-form';
 import { refs } from '../refs';
