@@ -14,4 +14,4 @@ export const refs = {
   btnQueue: document.querySelector('.js-queue'),
 };
 
-export const imgUrl = new URL('../images/alt-poster.jpg', import.meta.url);
+export const imgUrl = new URL('../images/no-film-poster.jpg', import.meta.url);
