@@ -4,11 +4,7 @@ import { imgUrl } from './refs';
 
 export default function renderMarkup(films) {
   const createdElements = films.results
-<<<<<<< Updated upstream
-    .map(film => {  console.log(film.poster_path)
-=======
     .map(film => {
->>>>>>> Stashed changes
       if (film.genre_ids.length <= 2) {
         const cardFilm = `
       <div class="film-card" data-id=${film.id}>
