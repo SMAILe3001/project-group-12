@@ -21,12 +21,12 @@ export default function renderMarkup(films) {
             film.details = film.release_date.substr(0, 4);
         }
 
-      const isMobile = (document.body.clientWidth <= 768)
+      const posterSize = (document.body.clientWidth <= 768)
         ? 'w342'
         : 'w500';
 
       film.poster_url = film.poster_path
-          ? `https://image.tmdb.org/t/p/${isMobile}${film.poster_path}`
+          ? `https://image.tmdb.org/t/p/${posterSize}${film.poster_path}`
           : `${imgUrl}`;
 
         return filmCardCreate(film);
