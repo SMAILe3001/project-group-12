@@ -21,7 +21,11 @@ export default function renderMarkup(films) {
             film.details = film.release_date.substr(0, 4);
         }
 
-        return filmCardCreate(film).replace("defIMG", `${imgUrl}`);
+        film.poster_url = film.poster_path
+          ? `https://image.tmdb.org/t/p/w500${film.poster_path}`
+          : `${imgUrl}`;
+
+        return filmCardCreate(film);
     })
     .join('');
 
