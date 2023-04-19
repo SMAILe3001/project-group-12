@@ -9,4 +9,4 @@
 import './js/form_search/render-murkap-form';
 import './js/modal-info-film';
 
-// import './js/developersModal';
+import './js/developersModal';
