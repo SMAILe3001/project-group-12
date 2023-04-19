@@ -15,7 +15,6 @@
   top: 50%;
   left: 50%;
   width: 936;
-  
 
   height: 608px;
   text-align: center;
@@ -35,8 +34,6 @@
   padding-bottom: 13px;
   padding-top: 13px;
 }
-
-
 
 .developer-container {
   display: flex;
@@ -71,7 +68,7 @@
 
   &:hover {
     transform: scale(1.1);
-    transition: all, ease-in-out ;
+    transition: all, ease-in-out;
     box-shadow: #ff6b08 0px 2px 9px, rgb(255, 108, 11) 0px 0px 0px 3px;
   }
 }
@@ -114,7 +111,6 @@
   border-radius: 50%;
   background-color: transparent;
 
-
   &:hover,
   :focus {
     transform: scale(1.1);
@@ -131,9 +127,9 @@
     justify-content: center;
     margin-left: 10px;
     margin-right: 10px;
-   
+
     width: 680px;
-   
+
     max-height: 100vh;
     position: relative;
     margin: auto;
@@ -220,8 +216,6 @@
   letter-spacing: 3%;
 }
 
-
-
 .dev-set {
   align-items: center;
   text-align: center;
@@ -303,8 +297,6 @@
   justify-content: center;
 }
 
-
-
 .modal-team::-webkit-scrollbar {
   width: 12px;
 }
@@ -312,10 +304,6 @@
 .modal-team::-webkit-scrollbar-track {
   background: #ffffff;
 }
-
-
-
-
 
 .modal-team::-webkit-scrollbar-thumb {
   background-color: #858484;
