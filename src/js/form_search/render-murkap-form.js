@@ -1,7 +1,8 @@
 import Notiflix from 'notiflix';
 import API from './load-form';
 import { refs } from '../refs';
-import renderMovie from '../render-markup';
+// import renderMovie from '../render-markup';
+import renderMarkup from '../render-markup_hbs';
 import { showSpinner, hideSpinner } from '../spiner';
 import { paginationRender } from '../pagination';
 
@@ -22,7 +23,7 @@ async function fetchSerchForm(evt) {
     if (movies.results.length === 0) {
       Notiflix.Notify.info('Sorry, but nothing was found for your request');
     } else {
-      renderMovie(movies);
+      renderMarkup(movies);
       clearValue();
     }
   } catch (error) {

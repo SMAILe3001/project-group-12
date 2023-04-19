@@ -1,6 +1,7 @@
 import loadPopular from './load-popular';
 import onFetchError from './on-fetch-error';
-import renderMarkup from '../render-markup';
+// import renderMarkup from '../render-markup';
+import renderMarkup from '../render-markup_hbs';
 import { showSpinner, hideSpinner } from '../spiner';
 import { paginationRender } from '../pagination';
 
