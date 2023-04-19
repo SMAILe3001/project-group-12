@@ -1,9 +1,9 @@
-      <li class="film-card" data-id={{id}}>
-        <img class="film-poster" src="{{poster_url}}" alt="poster">
-        <h2 class="film-title">{{title}}</h2>
-        <div class="film-info">
-        {{#if details}}
-            <span class="film-details">{{details}}</span>
-        {{/if}}
-        </div>
-      </li>
+<li class='film-card' data-id={{id}}>
+  <img class='film-poster' src='{{poster_url}}' alt='poster' loading='lazy' />
+  <h2 class='film-title'>{{title}}</h2>
+  <div class='film-info'>
+    {{#if details}}
+      <span class='film-details'>{{details}}</span>
+    {{/if}}
+  </div>
+</li>
