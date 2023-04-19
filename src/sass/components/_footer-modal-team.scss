@@ -68,7 +68,7 @@
 
   &:hover {
     transform: scale(1.1);
-    transition: all, ease-in-out;
+    transition: all, ease-in-out, 500ms;
     box-shadow: #ff6b08 0px 2px 9px, rgb(255, 108, 11) 0px 0px 0px 3px;
   }
 }
