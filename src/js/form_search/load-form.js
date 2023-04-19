@@ -1,5 +1,4 @@
 import axios from 'axios';
-import Notiflix from 'notiflix';
 import { BASE_URL, API_KEY } from '../api';
 
 // =

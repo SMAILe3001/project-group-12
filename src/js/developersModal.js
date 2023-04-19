@@ -26,7 +26,7 @@ function personalCard(developers) {
           <li class='devcont-item'>
     <a href="#" class='devcont-link'>
       <div class='devcont-imgbox'>
-        <img src="${image}" alt='${name}' class='devcont-img' />
+        <img src="${image}" alt='${name}' class='devcont-img' loading="lazy"/>
       </div>
       <div class='devcont-description'>
         <p class='devcont-name'>${name}</p>

@@ -6,6 +6,8 @@
   background-size: cover;
   border-radius: 10px;
 
+  // animation: 10s anibBegMobile infinite;
+
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
@@ -16,6 +18,7 @@
     height: 222px;
     padding: 16px;
     background-image: url(../images/header-tablet.jpg);
+    animation: 10s anibBegTablett infinite;
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
@@ -27,11 +30,81 @@
     padding: 16px 32px 32px 32px;
     height: 316px;
     background-image: url(../images/header-desktop.jpg);
+    animation: 10s anibBegDesctop infinite;
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url(../images/header-desktop@2x.jpg);
     }
+  }
+}
+
+@keyframes anibBegDesctop {
+  0% {
+  }
+  22% {
+    background-image: url(../images/header-desktop.jpg);
+  }
+  33% {
+    background-image: url(../images/header-desktop1.jpg);
+  }
+  55% {
+    background-image: url(../images/header-desktop1.jpg);
+  }
+  66% {
+    background-image: url(../images/header-desktop2.jpg);
+  }
+  88% {
+    background-image: url(../images/header-desktop2.jpg);
+  }
+  100% {
+    background-image: url(../images/header-desktop.jpg);
+  }
+}
+
+@keyframes anibBegTablett {
+  0% {
+  }
+  22% {
+    background-image: url(../images/header-tablet.jpg);
+  }
+  33% {
+    background-image: url(../images/header-tablet1.jpg);
+  }
+  55% {
+    background-image: url(../images/header-tablet1.jpg);
+  }
+  66% {
+    background-image: url(../images/header-tablet2.jpg);
+  }
+  88% {
+    background-image: url(../images/header-tablet2.jpg);
+  }
+  100% {
+    background-image: url(../images/header-tablet.jpg);
+  }
+}
+
+@keyframes anibBegMobile {
+  0% {
+  }
+  22% {
+    background-image: url(../images/header-mobile.jpg);
+  }
+  33% {
+    background-image: url(../images/header-mobile1.jpg);
+  }
+  55% {
+    background-image: url(../images/header-mobile1.jpg);
+  }
+  66% {
+    background-image: url(../images/header-mobile2.jpg);
+  }
+  88% {
+    background-image: url(../images/header-mobile2.jpg);
+  }
+  100% {
+    background-image: url(../images/header-mobile.jpg);
   }
 }
 
@@ -64,6 +137,7 @@
   width: 100%;
   height: 42px;
   padding: 16px;
+  padding-right: 40px;
   background: #ffffff;
   border-radius: 100px;
   border: none;
@@ -135,7 +209,8 @@
 }
 
 .logo {
-  margin-top: 60vh;
+  margin-top: 312px;
+  // margin-top: 48vh;
 
   @media screen and (min-width: $table-width) {
     margin-top: 105px;

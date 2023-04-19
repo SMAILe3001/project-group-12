@@ -1,41 +1,42 @@
-<h2 class="film-info-details__header">{{title}}</h2>
+<h2 class='film-info-details__header'>{{title}}</h2>
 
-<table class="film-info-details__table">
-    <tr>
-        <td class="film-info-details__text">
-          Vote / Votes
-        </td>
-        <td class="film-info-details__value film-info-details__vote-cell">
-            <span class="film-info-details__rating">{{vote_average}}</span>
-            <span class="film-info-details__separator">/</span>
-            <span class="film-info-details__vote">{{vote_count}}</span>
-        </td>
-    </tr>
-    <tr>
-        <td class="film-info-details__text">
-          Popularity
-        </td>
-        <td class="film-info-details__value">
-          {{popularity}}
-        </td>                
-    </tr>
-    <tr>
-        <td class="film-info-details__text">
-          Original Title
-        </td>
-        <td class="film-info-details__value">
-          {{original_title}}
-        </td>                
-    </tr>
-    <tr>
-        <td class="film-info-details__text">
-          Genre
-        </td>
-        <td class="film-info-details__value">
-          {{#each genres}}{{#if @index}}, {{/if}}{{name}}{{/each}}
-        </td>                
-    </tr>        
+<table class='film-info-details__table'>
+  <tr>
+    <td class='film-info-details__text'>
+      Vote / Votes
+    </td>
+    <td class='film-info-details__value film-info-details__vote-cell'>
+      <span class='film-info-details__rating'>{{vote_average}}</span>
+      <span class='film-info-details__separator'>/</span>
+      <span class='film-info-details__vote'>{{vote_count}}</span>
+    </td>
+  </tr>
+  <tr>
+    <td class='film-info-details__text'>
+      Popularity
+    </td>
+    <td class='film-info-details__value'>
+      {{popularity}}
+    </td>
+  </tr>
+  <tr>
+    <td class='film-info-details__text'>
+      Original Title
+    </td>
+    <td class='film-info-details__value'>
+      {{title}}
+    </td>
+  </tr>
+  <tr>
+    {{#if genres}}
+      <td class='film-info-details__text'>
+        Genre
+      </td>
+      <td class='film-info-details__value'>
+        {{#each genres}}{{#if @index}}, {{/if}}{{name}}{{/each}}
+      </td>{{/if}}
+  </tr>
 </table>
 
-<h4 class="film-info__about-header">ABOUT</h4>
-<p class="film-info__about">{{overview}}</p>
+<h4 class='film-info__about-header'>ABOUT</h4>
+<p class='film-info__about'>{{overview}}</p>

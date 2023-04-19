@@ -2,7 +2,7 @@ export const refs = {
   galleryFilms: document.querySelector('.galleryFilms-js'),
   form: document.querySelector('.search'),
   inputElement: document.querySelector('.search__input'),
-  backdrop: document.querySelector('.backdrop'),
+  backdrop: document.querySelector('.js-infoFilm'),
   modalClose: document.querySelector('.film-info-card__button-close'),
   filmInfoCard: document.querySelector('.film-info__card'),
   filmInfoCardImage: document.querySelector('.film-info-card__image'),

@@ -38,7 +38,7 @@ footer {
 
 .footer__icon {
   display: inline-block;
-  -webkit-animation: 3s heartbeat infinite;
+  animation: 3s heartbeat infinite;
 }
 
 .footer__team-link {
@@ -54,9 +54,8 @@ footer {
     text-decoration: underline;
 }
 
+@keyframes heartbeat {
 
-
-@-webkit-keyframes heartbeat {
   0% {
   }
   40% {
@@ -79,4 +78,4 @@ footer {
   }
   100% {
   }
-} ;
+}
