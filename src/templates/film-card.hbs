@@ -1,6 +1,5 @@
       <li class="film-card" data-id={{id}}>
-        <img class="film-poster" src="{{#if poster_path}}https://image.tmdb.org/t/p/w500{{poster_path}}{{else}}defIMG{{/if}}"
-          alt="poster">
+        <img class="film-poster" src="{{poster_url}}" alt="poster">
         <h2 class="film-title">{{title}}</h2>
         <div class="film-info">
         {{#if details}}
