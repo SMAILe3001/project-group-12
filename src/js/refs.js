@@ -12,6 +12,12 @@ export const refs = {
   container: document.getElementById('tui-pagination-container'),
   btnWatched: document.querySelector('.js-watched'),
   btnQueue: document.querySelector('.js-queue'),
+  footer: document.querySelector('.footer'),
+  openModalBtnFoot: document.querySelector('[data-action="open-modal"]'),
+  closeModalBtnFoot: document.querySelector('[data-action="close-modal"]'),
+  backdropTeamFoot: document.querySelector('.js-backdrop'),
+  team: document.querySelector('.dev-set'),
+  developersBoard: document.querySelector('.js-dev-set'),
 };
 
 export const imgUrl = new URL('../images/no-film-poster.jpg', import.meta.url);

@@ -2,18 +2,9 @@ import { developers } from './developersCard';
 import '@fortawesome/fontawesome-free/js/brands';
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
-const refs = {
-  footer: document.querySelector('.footer'),
+import { refs } from './refs';
 
-  openModalBtnFoot: document.querySelector('[data-action="open-modal"]'),
-  closeModalBtnFoot: document.querySelector('[data-action="close-modal"]'),
-  backdropTeamFoot: document.querySelector('.js-backdrop'),
-
-  team: document.querySelector('.dev-set'),
-};
-
-const developersBoard = document.querySelector('.js-dev-set');
-developersBoard.innerHTML = personalCard(developers);
+refs.developersBoard.innerHTML = personalCard(developers);
 
 refs.openModalBtnFoot.addEventListener('click', onOpenModal);
 refs.backdropTeamFoot.addEventListener('click', onBackdropClick);
